@@ -6,19 +6,19 @@ const FILES_TO_CACHE = [
   "/index.html",
   "/student.html",
   "/teacher.html",
-  "/css/main.css",
-  "/css/student.css",
-  "/css/teacher.css",
-  "/js/main.js",
-  "/js/student.js",
-  "/js/teacher.js",
-  "/js/progress.js",
-  "/js/multilang.js",
-  "/js/games.js",
-  "/assets/lang/en.json",
-  "/assets/lang/od.json",
-  "/assets/images/student-avatar.svg",
-  "/assets/images/teacher-avatar.svg"
+  "/main.css",
+  "/student.css",
+  "/teacher.css",
+  "/main.js",
+  "/student.js",
+  "/teacher.js",
+  "/progress.js",
+  "/multilang.js",
+  "/games.js",
+  "/en.json",
+  "/od.json",
+  "/student-avatar.svg",
+  "/teacher-avatar.svg"
 ];
 
 // Install event: cache all files
