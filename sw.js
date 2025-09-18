@@ -9,6 +9,8 @@ const FILES_TO_CACHE = [
   "/main.css",
   "/student.css",
   "/teacher.css",
+  "/index.css",
+  "/index-8BjkvHTU.css",
   "/main.js",
   "/student.js",
   "/teacher.js",
@@ -18,7 +20,10 @@ const FILES_TO_CACHE = [
   "/en.json",
   "/od.json",
   "/student-avatar.svg",
-  "/teacher-avatar.svg"
+  "/teacher-avatar.svg",
+  "/manifest-D0_yXnD7.json",
+  "/main.tsk"
+  
 ];
 
 // Install event: cache all files
