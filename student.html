@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - EduSTEM</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">🚀 EduSTEM</div>
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="assets/images/student-avatar.svg" alt="Student Avatar" id="studentAvatar">
+                    </div>
+                    <span class="username" data-translate="welcome">Welcome, Student!</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active" data-translate="dashboard">🏠 Dashboard</a></li>
+                <li><a href="#videos" class="nav-link" data-translate="videos">🎥 STEM Videos</a></li>
+                <li><a href="#games" class="nav-link" data-translate="games">🎮 Learning Games</a></li>
+                <li><a href="#progress" class="nav-link" data-translate="progress">📊 Progress</a></li>
+                <li><a href="#achievements" class="nav-link" data-translate="achievements">🏆 Achievements</a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button onclick="goHome()" class="btn-secondary" data-translate="home">🏠 Home</button>
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="od">ଓଡ଼ିଆ</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="content-section active" id="dashboard">
+                <div class="section-header">
+                    <h2 data-translate="dashboard">Dashboard</h2>
+                    <div class="progress-summary">
+                        <div class="xp-counter">
+                            <span class="xp-icon">⭐</span>
+                            <span id="totalXP">0</span> XP
+                        </div>
+                        <div class="level-badge">
+                            <span data-translate="level">Level</span> <span id="currentLevel">1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card quick-stats">
+                        <h3 data-translate="todayActivity">Today's Activity</h3>
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <span class="stat-number" id="videosWatched">0</span>
+                                <span class="stat-label" data-translate="videosWatched">Videos Watched</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="gamesPlayed">0</span>
+                                <span class="stat-label" data-translate="gamesPlayed">Games Played</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="timeSpent">0</span>
+                                <span class="stat-label" data-translate="minutesSpent">Minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card recent-achievements">
+                        <h3 data-translate="recentAchievements">Recent Achievements</h3>
+                        <div class="achievements-list" id="recentAchievements">
+                            <div class="achievement-item">
+                                <span class="achievement-badge">🎬</span>
+                                <span class="achievement-text" data-translate="firstVideo">First Video Completed!</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card learning-streak">
+                        <h3 data-translate="learningStreak">Learning Streak</h3>
+                        <div class="streak-display">
+                            <div class="streak-number" id="currentStreak">0</div>
+                            <div class="streak-label" data-translate="daysStreak">Days</div>
+                        </div>
+                        <div class="streak-calendar" id="streakCalendar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="videos">
+                <div class="section-header">
+                    <h2 data-translate="stemVideos">STEM Videos</h2>
+                    <div class="filter-tags">
+                        <button class="filter-tag active" data-category="all" data-translate="all">All</button>
+                        <button class="filter-tag" data-category="science" data-translate="science">Science</button>
+                        <button class="filter-tag" data-category="technology" data-translate="technology">Technology</button>
+                        <button class="filter-tag" data-category="engineering" data-translate="engineering">Engineering</button>
+                        <button class="filter-tag" data-category="mathematics" data-translate="mathematics">Mathematics</button>
+                    </div>
+                </div>
+                
+                <div class="video-grid" id="videoGrid">
+                    <div class="video-card" data-category="science" data-video="photosynthesis">
+                        <div class="video-thumbnail">
+                            <div class="video-preview">🌱</div>
+                            <div class="play-button">▶️</div>
+                            <div class="video-duration">5:30</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 data-translate="photosynthesisTitle">How Plants Make Food</h3>
+                            <p data-translate="photosynthesisDesc">Discover the amazing process of photosynthesis</p>
+                            <div class="video-meta">
+                                <span class="difficulty easy" data-translate="easy">Easy</span>
+                                <span class="xp-reward">+10 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card" data-category="mathematics" data-video="geometry">
+                        <div class="video-thumbnail">
+                            <div class="video-preview">📐</div>
+                            <div class="play-button">▶️</div>
+                            <div class="video-duration">7:15</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 data-translate="geometryTitle">Fun with Shapes</h3>
+                            <p data-translate="geometryDesc">Explore circles, triangles, and squares</p>
+                            <div class="video-meta">
+                                <span class="difficulty medium" data-translate="medium">Medium</span>
+                                <span class="xp-reward">+15 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="games">
+                <div class="section-header">
+                    <h2 data-translate="learningGames">Learning Games</h2>
+                </div>
+                
+                <div class="games-grid">
+                    <div class="game-card" onclick="playGame('math-quiz')">
+                        <div class="game-icon">🧮</div>
+                        <h3 data-translate="mathQuiz">Math Quiz Challenge</h3>
+                        <p data-translate="mathQuizDesc">Test your arithmetic skills</p>
+                        <div class="game-meta">
+                            <span class="difficulty easy" data-translate="easy">Easy</span>
+                            <span class="xp-reward">+20 XP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" onclick="playGame('science-lab')">
+                        <div class="game-icon">🧪</div>
+                        <h3 data-translate="scienceLab">Virtual Science Lab</h3>
+                        <p data-translate="scienceLabDesc">Conduct safe experiments</p>
+                        <div class="game-meta">
+                            <span class="difficulty medium" data-translate="medium">Medium</span>
+                            <span class="xp-reward">+25 XP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card" onclick="playGame('pattern-game')">
+                        <div class="game-icon">🎨</div>
+                        <h3 data-translate="patternGame">Pattern Master</h3>
+                        <p data-translate="patternGameDesc">Complete the sequences</p>
+                        <div class="game-meta">
+                            <span class="difficulty hard" data-translate="hard">Hard</span>
+                            <span class="xp-reward">+30 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="progress">
+                <div class="section-header">
+                    <h2 data-translate="myProgress">My Progress</h2>
+                </div>
+                
+                <div class="progress-overview">
+                    <div class="progress-card">
+                        <h3 data-translate="overallProgress">Overall Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="overallProgress" style="width: 35%;"></div>
+                        </div>
+                        <span class="progress-text">35% Complete</span>
+                    </div>
+                    
+                    <div class="subjects-progress">
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span class="subject-name" data-translate="science">Science</span>
+                                <span class="subject-score">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill science" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span class="subject-name" data-translate="mathematics">Mathematics</span>
+                                <span class="subject-score">45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill math" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span class="subject-name" data-translate="technology">Technology</span>
+                                <span class="subject-score">25%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill tech" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="achievements">
+                <div class="section-header">
+                    <h2 data-translate="achievements">Achievements</h2>
+                </div>
+                
+                <div class="achievements-grid" id="achievementsGrid">
+                    <div class="achievement-card earned">
+                        <div class="achievement-badge">🎬</div>
+                        <h3 data-translate="videoWatcher">Video Watcher</h3>
+                        <p data-translate="videoWatcherDesc">Watch your first STEM video</p>
+                        <div class="achievement-date">Earned: Today</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-badge">🎮</div>
+                        <h3 data-translate="gamemaster">Gamemaster</h3>
+                        <p data-translate="gamemasterDesc">Complete 10 learning games</p>
+                        <div class="achievement-progress">3/10</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-badge">🏆</div>
+                        <h3 data-translate="stemChampion">STEM Champion</h3>
+                        <p data-translate="stemChampionDesc">Master all four STEM subjects</p>
+                        <div class="achievement-progress">1/4</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="game-modal" id="gameModal">
+        <div class="game-content">
+            <div class="game-header">
+                <h3 id="gameTitle">Math Quiz Challenge</h3>
+                <button class="close-game" onclick="closeGame()">×</button>
+            </div>
+            <div class="game-area" id="gameArea">
+                <!-- Game content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/multilang.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/student.js"></script>
+</body>
+</html>

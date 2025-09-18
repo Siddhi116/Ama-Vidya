@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSTEM - Interactive Learning Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="stars"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <header class="landing-header">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <h1>EduSTEM</h1>
+            </div>
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="od">ଓଡ଼ିଆ</option>
+                </select>
+            </div>
+        </header>
+
+        <main class="landing-main">
+            <div class="hero-section">
+                <h2 data-translate="welcome">Welcome to Interactive STEM Learning</h2>
+                <p data-translate="tagline">Explore, Learn, and Discover the Wonders of Science, Technology, Engineering, and Mathematics</p>
+                
+                <div class="role-selection">
+                    <div class="role-card student-card" onclick="selectRole('student')">
+                        <div class="role-icon">👨‍🎓</div>
+                        <h3 data-translate="student">Student</h3>
+                        <p data-translate="studentDesc">Start your learning journey with fun games and videos</p>
+                        <div class="card-glow"></div>
+                    </div>
+                    
+                    <div class="role-card teacher-card" onclick="selectRole('teacher')">
+                        <div class="role-icon">👩‍🏫</div>
+                        <h3 data-translate="teacher">Teacher</h3>
+                        <p data-translate="teacherDesc">Manage content and track student progress</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="offline-indicator" id="offlineIndicator">
+            <span>🌐 Working Offline</span>
+        </div>
+    </div>
+
+    <script src="js/multilang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
