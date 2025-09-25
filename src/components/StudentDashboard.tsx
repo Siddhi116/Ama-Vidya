@@ -1,17 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Home, 
-  Play, 
-  GameController2, 
-  TrendingUp, 
-  Trophy, 
-  Star, 
-  Clock, 
-  Target,
-  Settings,
-  LogOut,
-  User
-} from 'lucide-react';
+import { Home, Play, TowerControl as GameController2, TrendingUp, Trophy, Star, Clock, Target, Settings, LogOut, User } from 'lucide-react';
 import AvatarCustomization from './AvatarCustomization';
 
 interface StudentDashboardProps {
