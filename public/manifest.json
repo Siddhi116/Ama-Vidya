@@ -1,0 +1,83 @@
+{
+  "name": "AmaVidya - Interactive Learning Platform",
+  "short_name": "AmaVidya",
+  "description": "Interactive STEM learning platform with offline capabilities and real-time progress tracking",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "scope": "/",
+  "categories": ["education", "learning", "stem", "interactive"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg width='192' height='192' viewBox='0 0 192 192' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='192' height='192' fill='%236366f1' rx='20'/%3E%3Ctext x='96' y='120' text-anchor='middle' font-size='120'%3E🚀%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' fill='%236366f1' rx='50'/%3E%3Ctext x='256' y='320' text-anchor='middle' font-size='300'%3E🚀%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg width='1280' height='720' viewBox='0 0 1280 720' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1280' height='720' fill='%23667eea'/%3E%3Ctext x='640' y='300' text-anchor='middle' font-size='48' fill='white'%3EAmaVidya Learning Platform%3C/text%3E%3Ctext x='640' y='360' text-anchor='middle' font-size='24' fill='white'%3EInteractive STEM Education%3C/text%3E%3Ctext x='640' y='420' text-anchor='middle' font-size='60'%3E🚀%3C/text%3E%3C/svg%3E",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "AmaVidya Learning Platform Dashboard"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg width='750' height='1334' viewBox='0 0 750 1334' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='750' height='1334' fill='%23667eea'/%3E%3Ctext x='375' y='400' text-anchor='middle' font-size='36' fill='white'%3EAmaVidya%3C/text%3E%3Ctext x='375' y='500' text-anchor='middle' font-size='18' fill='white'%3EMobile Learning Experience%3C/text%3E%3Ctext x='375' y='600' text-anchor='middle' font-size='80'%3E📱%3C/text%3E%3C/svg%3E",
+      "sizes": "750x1334",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "AmaVidya Mobile Interface"
+    }
+  ],
+  "features": [
+    "offline-capable",
+    "educational-content",
+    "progress-tracking",
+    "multilingual",
+    "gamification",
+    "real-time-sync",
+    "avatar-customization",
+    "authentication"
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Student Dashboard",
+      "short_name": "Student",
+      "description": "Access student learning dashboard",
+      "url": "/?role=student",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='96' height='96' fill='%2310b981' rx='10'/%3E%3Ctext x='48' y='60' text-anchor='middle' font-size='48'%3E👨‍🎓%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Teacher Dashboard",
+      "short_name": "Teacher",
+      "description": "Access teacher management dashboard",
+      "url": "/?role=teacher",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='96' height='96' fill='%23f59e0b' rx='10'/%3E%3Ctext x='48' y='60' text-anchor='middle' font-size='48'%3E👨‍🏫%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
